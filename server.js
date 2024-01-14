@@ -3,7 +3,7 @@ const dotenv = require('dotenv').config()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const cardRouter = require('./routes/cardRoutes')
-
+const cors = require('cors')
 const app = express()
 
 
@@ -11,10 +11,12 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(bodyParser.json());
+app.use(express.json());
+app.use(cors());
 
 
 // Routes
-app.use(cardRouter)
+app.use(cardRouter);
 
 const PORT = process.env.PORT || 5000
 

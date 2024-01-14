@@ -1,10 +1,20 @@
-const mongoose = require('mongoose')
+// cardModel.js
 
-const cardSchema = mongoose.Schema({
-    name: String,
-    imgUrl: String
-})
+const mongoose = require('mongoose');
 
-const Card = mongoose.Model("Card", cardSchema)
+const cardSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  imgURL: {
+    type: String,
+    required: true,
+    default: "https//i.ibb.co/4pDNDK1/avatar.png"
+  },
+  // Add other fields as needed
+});
 
-module.exports = Card
+const Card = mongoose.model('Card', cardSchema);
+
+module.exports = Card;
