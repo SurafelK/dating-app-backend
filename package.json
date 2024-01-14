@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.4"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "backend": "nodemon server.js"
+  },
+  "name": "dating-app-backend",
+  "version": "1.0.0",
+  "description": "Dating app backend",
+  "main": "server.js",
+  "author": "SurafelK",
+  "license": "ISC"
+}
