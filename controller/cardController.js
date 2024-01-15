@@ -44,7 +44,7 @@ const getCards = async (req, res) => {
         });
       }
   
-      return res.status(200).json(cards);
+      return res.status(200).json( cards );
     } catch (error) {
       console.error("Error in getCards:", error);
       return res.status(500).json({
